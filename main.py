@@ -101,9 +101,9 @@ class Area(Ursina):
         for i in self.piramid.ts:
             i.color = color.black
         del_x = degrees(atan(self.h / (self.a / 2)))
-        self.pl = Entity(model='quad', color=color.light_gray, scale=(self.a + 5, self.SN.scale[1] + 10),
+        self.pl = Entity(model='quad', color=(0.75, 0.75, 0.75, 0.5), scale=(self.a + 5, self.SN.scale[1] + 10),
                          x=-self.a/4, y=self.h/2, rotation_y=90, rotation_x=90-del_x)
-        self.plx = Entity(model='quad', color=color.light_gray, scale=(self.a + 5, self.SN.scale[1] + 10),
+        self.plx = Entity(model='quad', color=(0.75, 0.75, 0.75, 0.5), scale=(self.a + 5, self.SN.scale[1] + 10),
                           x=-self.a / 4, y=self.h / 2, rotation_y=-90, rotation_x=del_x-90)
         self.perp = Entity(model=Cylinder(), color=color.black, scale=(0.1, self.a/2 * sin(radians(del_x)), 0.1),
                            x=self.P.x, y=self.P.y, z=self.P.z,
