@@ -190,3 +190,4 @@ class Area(Ursina):
 if __name__ == '__main__':
     area = Area()
     area.run()
+    input()
